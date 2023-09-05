@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TimeOut</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.buquebus.com/Portal/resources/Bqb/css/portal-core.css?v=1.10.10">
+    <script src="https://www.buquebus.com/Portal/resources/js/lib/jQuery/jquery-3.5.0.min.js?version=1.10.10"></script>
+    <link rel="stylesheet" href="https://www.buquebus.com/resources_portal/Bqb/resources/css/styles_bqb.css?v=1.10.10">
+    <link rel="stylesheet" href="modalresumen.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <section>
+        <img src="desktop.png" alt="" data-bs-toggle="modal" data-bs-target="#modalTimeout">
+    </section>
+
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalTimeout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  data-bs-backdrop="static" data-bs-keyboard="false" >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               
+                <div class="modal-body d-flex flex-column align-items-center">
+                    <img src="timeout-ilus.svg" alt="" class="text-center mx-auto" style="margin-top: 2rem; width: 350px;">
+                  <p class="h4 text-center"><strong>Expiró el tiempo para finalizar tu reserva</strong></p>
+<p class="text-center">Recordá que tenés 30 minutos para finalizar tu compra. Si tuviste algun inconveniente, podés <a href="#" target="_blank"><strong>comunicarte con nuestro centro de contacto.</strong></a></p>
+                        
+                        <div class="mt-4" style="padding-bottom: 2rem; padding-top: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem;">
+                            <a href="#">
+                                <button class="button-primary">REINICIAR ESTA RESERVA</button>
+                            </a>
+                            <a href="#">
+                                <button class="button-secondary">VOLVER AL INICIO</button>
+                            </a>
+                        </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <script
+        src="https://www.buquebus.com/Portal/resources/Bqb/js/bootstrap.bundle.min.js;jsessionid=EDC970C259ACD114353AE8BCF5714AA4?version=1.10.10"
+        async defer></script>
+
+        <script>
+            // Function to show the modal after a delay
+            function showModalDelayed() {
+                setTimeout(function() {
+                    var modalTimeout = new bootstrap.Modal(document.getElementById('modalTimeout'));
+                    modalTimeout.show(); // Show the modal
+                }, 1000); // 2000 milliseconds = 2 seconds
+            }
+        
+            // Call the function when the page loads or when needed
+            window.addEventListener('load', function() {
+                showModalDelayed();
+            });
+        </script>
+        
+</body>
+
+</html>
